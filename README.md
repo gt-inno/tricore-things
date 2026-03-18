@@ -1,6 +1,6 @@
 # tricore-things
 
-This repo contains some python utilities for working with the DAP OCD protocon found in Aurix Tricore processors.
+This repo contains some python utilities for working with the DAP OCD protocol found in Aurix Tricore processors.
 
 ## Parsers
 
@@ -19,9 +19,9 @@ Some On-Chip Debug operations were reimplemented in python, and can be used eith
 The file "ftdi_dap.py" contains the implementation of the DAP protocol, while "run_demo.py" contains some examples on how to use it.
 
 
-# DAPBatch
+# DAP Batch
 
-DAPBatch implements low level DAP operations, they can be queued together and run together with the `exec()` method.
+DAP Batch implements low level DAP operations, they can be queued together and run together with the `exec()` method.
 
 Queueing together as many operations as possible is critical to get deterministic timings which are useful when attempting fault-injection.
 
@@ -36,7 +36,7 @@ When queueing a low level DAP operation which has a response, a Promise object i
         print("DAP was already unlocked")
 ```
 
-# DAPOperations
+# DAP Operations
 
-DAPOperations implements higher level DAP operations such as writing to and reading from RAM.
+DAP Operations implements higher level DAP operations such as writing to and reading from RAM.
 Registers can also be manipulated by writing to the CSFR area of each CPU, refer to the Core Architecture manual for details.
